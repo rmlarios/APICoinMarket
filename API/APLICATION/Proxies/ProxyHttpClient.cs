@@ -19,7 +19,7 @@ namespace APLICATION.Proxies
     //  _httpContextAccesor = httpContextAccessor;
     }
 
-    public HttpClient Get()
+    public HttpClient Get(string key)
     {
       var client = new HttpClient();
       client.BaseAddress = new Uri("https://pro-api.coinmarketcap.com/v1/cryptocurrency/");
@@ -27,7 +27,8 @@ namespace APLICATION.Proxies
       .Accept
       .Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-      client.DefaultRequestHeaders.Add("X-CMC_PRO_API_KEY", "813e38ca-7edb-4743-81a1-ceb0a4e51d9a");
+      // client.DefaultRequestHeaders.Add("X-CMC_PRO_API_KEY", "813e38ca-7edb-4743-81a1-ceb0a4e51d9a");
+      client.DefaultRequestHeaders.Add("X-CMC_PRO_API_KEY", key);
 
       return client;
 

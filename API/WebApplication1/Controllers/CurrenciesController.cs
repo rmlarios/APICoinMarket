@@ -19,9 +19,9 @@ namespace API.Controllers
         }
 
         [HttpGet("List")]
-        public async Task<ApiResponse> GetList()
+        public async Task<ApiResponse> GetList(string key)
         {
-            return await _service.GetCurrencyList();
+            return await _service.GetCurrencyList(key);
         }
     }
 }
