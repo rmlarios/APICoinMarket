@@ -1,3 +1,4 @@
+using API.Middleware;
 using APLICATION.Proxies;
 using APLICATION.Services;
 using Microsoft.AspNetCore.Builder;
@@ -63,7 +64,7 @@ namespace WebApplication1
 
 
           //  app.UseHttpsRedirection();
-
+app.UseMiddleware<ErrorHandlerMiddlerware>();
             app.UseRouting();
 
             app.UseAuthorization();

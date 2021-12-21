@@ -10,5 +10,6 @@ namespace APLICATION.Wrappers
       public IDictionary<String, Currency> data { get; set; }
 
         public Status status{ get; set; }
+    
   }
 }
